@@ -1,254 +1,310 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-<title>Lights Out - 3D Stealth Game</title>
-<meta charset="UTF-8">
-<meta name="description" content="Lights Out ist ein Stealth Game, welches in etwa der Mitte des 21. Jahrhunderts spielt. Dieses Spiel ist ein Diplomarbeitsprojekt von drei Schülern der HTL 3 Rennweg"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-  body {font-family: "Lato", sans-serif}
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
+<head>
+  <title>Lights Out - 3D Stealth Game</title>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="Lights Out ist ein Stealth Game, welches in etwa der Mitte des 21. Jahrhunderts spielt. Dieses Spiel ist ein Diplomarbeitsprojekt von drei Schülern der HTL 3 Rennweg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: "Lato", sans-serif
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Lights Out</a>
-    <a href="#imprint" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Impressum</a>
-    <a href="#documents" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Dokumente</a>
-    <a href="#media" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Medien</a>
-    <a href="#progress" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Fortschritt</a>
-    <a href="#team" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Team</a>
-    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Download &bull;</a>
-    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Über Lights Out</a>
-  </div>
-</div>
-
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links)-->
-<div id="navBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Über Lights Out</a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Download &bull;</a>
-  <a href="#team" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Team</a>
-  <a href="#progress" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Fortschritt</a>
-  <a href="#media" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Medien</a>
-  <a href="#documents" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Dokumente</a>
-  <a href="#imprint" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Impressum</a>
-</div>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
-
-  <!-- Title Image-->
-  <div class="w3-display-container w3-center">
-    <img src="images/titleImage.jpg" alt="Lights Out als Titeltext" style="width:100%">
-  </div>
-
-  <!-- Lights Out - Idee-->
-  <div class="w3-container w3-content w3-center w3-padding-64" id="about" style="max-width:800px">
-    <h2 class="w3-wide">Lights Out - Idee</h2>
-    <p class="w3-center"> <!--w3-justify--> 
-		Lights Out spielt in etwa der Mitte des 21. Jahrhunderts. Die ganze Erde ist mit einer riesigen Smogwolke bedeckt, 
-		die keinen einzigen Sonnenstrahl mehr durchlässt und so leben die meisten Menschen in völliger Dunkelheit. 
-		Die fossilen Brennstoffe sind inzwischen fast vollkommen aufgebraucht und Energie ist in dieser Welt gleich Macht.
-		Diese Situation machte sich ein riesiger Energiekonzern zu Nutze, um die Menschheit zu versklaven. 
-		Aber es werden immer mehr Stimmen gegen diese Situation laut und es könnte schon bald zu einem Bürgerkrieg um Licht und Energie kommen.</p>
-	<p>
-		Sie als Protagonist sind eine der wenigen Hoffnungsschimmer für die Zukunft einer freien Menschheit. Spielen Sie auf Ihre Art und Weise, 
-		um einer Welt der Dunkelheit und Unterdrückung wieder Licht und Freiheit einzuhauchen.</p>
-		
-	<p>
-		Werden Sie sich ungesehen Ihren Weg durch diese Welt bahnen und wie ein Schatten zuschlagen oder stellen sie sich Ihren Gegner im offenen Kampf?
-		Werden Sie Ihre Gegner skrupellos beseitigen oder sie verschonen? <br>Es ist Ihre Entscheidung wie und was Sie tun, um die Menschheit zu retten.
-    </p>
-
-  <!-- Downloads-->
-  <div id="downloads">
-    <h2 class="w3-wide w3-center">Download</h2>
-    <p class="w3-opacity w3-center"><i>Hier können Sie die aktuelle Version des Spiels Lights Out herunterladen. Um das Spiel zu starten müssen Sie zuerst die heruntergeladene Datei extrahieren und dann LightsOut.exe ausführen.</i></p>
-	<a class="w3-button w3-black w3-center" href="Downloads/LightsOut.zip"><i class="fa fa-download"></i> Spiel: Lights Out</a>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+        onclick="openNavBar()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Lights Out</a>
+      <a href="#imprint" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Impressum</a>
+      <a href="#documents" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Dokumente</a>
+      <a href="#media" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Medien</a>
+      <a href="#progress" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Fortschritt</a>
+      <a href="#team" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Team</a>
+      <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Download &bull;</a>
+      <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">Über Lights Out</a>
     </div>
   </div>
+
+  <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links)-->
+  <div id="navBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="openNavBar()">Über Lights Out</a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="openNavBar()">Download &bull;</a>
+    <a href="#team" class="w3-bar-item w3-button w3-padding-large" onclick="openNavBar()">Team</a>
+    <a href="#progress" class="w3-bar-item w3-button w3-padding-large" onclick="openNavBar()">Fortschritt</a>
+    <a href="#media" class="w3-bar-item w3-button w3-padding-large" onclick="openNavBar()">Medien</a>
+    <a href="#documents" class="w3-bar-item w3-button w3-padding-large" onclick="openNavBar()">Dokumente</a>
+    <a href="#imprint" class="w3-bar-item w3-button w3-padding-large" onclick="openNavBar()">Impressum</a>
   </div>
 
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-    <!-- Team -->
-	<div class="w3-black" id="team">
-	  <div class="w3-container w3-content w3-center w3-padding-64 " style="max-width:800px">
-		<h2 class="w3-wide" id="team">Team</h2>
-		    <p class="w3-center"> 
-				Wir sind eine Gruppe von drei Schülern der HTL Wien 3 Rennweg.<br>
-				Gemeinsam erarbeiten wir uns diese Diplomarbeit um die Schule erfolgreich abzuschließen.
-			</p>
-		<div class="w3-row w3-padding-32">
-		  <div class="w3-third">
-			<p>Felix Berger</p>
-			<img src="images/felix_berger.jpg" class="w3-round" alt="Felix Berger Porträt" style="width:90%">
-			<p>Projektleiter</p>
-			<p>Story Writing & Programmierung</p>
-		  </div>
-		  <div class="w3-third">
-			<p>Tobias Preissner</p>
-			<img src="images/tobias_preissner.jpg" class="w3-round" alt="Tobias Preissner Porträt" style="width:90%">
-			<p>Stv.Projektleiter</p>
-			<p>3D Modellierung & Animation</p>
-		  </div>
-		  <div class="w3-third">
-			<p>Rafael Fiedler</p>
-			<img src="images/rafael_fiedler.jpg" class="w3-round" alt="Rafael Fiedler Porträt" style="width:90%">
-			<p>Mitarbeiter</p>
-			<p>Programmierung<br>Unity Implementation</p>
-		  </div>
-		</div>
-	  </div>
+    <!-- Title Image-->
+    <div class="w3-display-container w3-center">
+      <img src="images/titleImage.jpg" alt="Lights Out als Titeltext" style="width:100%">
+    </div>
+
+    <!-- Lights Out - Idee -->
+    <div class="w3-container w3-content w3-center w3-padding-64" id="about" style="max-width:800px">
+      <h2 class="w3-wide">Lights Out - Idee</h2>
+      <p class="w3-center">
+        Lights Out spielt in etwa der Mitte des 21. Jahrhunderts. Die ganze Erde ist mit einer riesigen Smogwolke
+        bedeckt,
+        die keinen einzigen Sonnenstrahl mehr durchlässt und so leben die meisten Menschen in völliger Dunkelheit.
+        Die fossilen Brennstoffe sind inzwischen fast vollkommen aufgebraucht und Energie ist in dieser Welt gleich
+        Macht.
+        Diese Situation machte sich ein riesiger Energiekonzern zu Nutze, um die Menschheit zu versklaven.
+        Aber es werden immer mehr Stimmen gegen diese Situation laut und es könnte schon bald zu einem Bürgerkrieg um
+        Licht und Energie kommen.
+      </p>
+      <p>
+        Sie als Protagonist sind eine der wenigen Hoffnungsschimmer für die Zukunft einer freien Menschheit. Spielen Sie
+        auf Ihre Art und Weise,
+        um einer Welt der Dunkelheit und Unterdrückung wieder Licht und Freiheit einzuhauchen.</p>
+
+      <p>
+        Werden Sie sich ungesehen Ihren Weg durch diese Welt bahnen und wie ein Schatten zuschlagen oder stellen sie
+        sich Ihren Gegner im offenen Kampf?
+        Werden Sie Ihre Gegner skrupellos beseitigen oder sie verschonen? <br>Es ist Ihre Entscheidung wie und was Sie
+        tun, um die Menschheit zu retten.
+      </p>
+
+      <!-- Game Download-->
+      <div id="downloads">
+        <h2 class="w3-wide w3-center">Download</h2>
+        <p class="w3-opacity w3-center">
+          <i>Hier können Sie die aktuelle Version des Spiels Lights Out herunterladen. Um
+            das Spiel zu starten müssen Sie zuerst die heruntergeladene Datei extrahieren und dann LightsOut.exe
+            ausführen.
+          </i>
+        </p>
+        <!-- Game Download Button-->
+        <a class="w3-button w3-black w3-center" href="files/placeholder_file.txt"><i class="fa fa-download"></i> Spiel:
+          Lights Out</a>
+      </div>
+    </div>
   </div>
+  <!-- End Lights Out - Idee -->
 
-    <!-- Progress -->
+
+  <!-- Team -->
+  <div class="w3-black" id="team">
+    <div class="w3-container w3-content w3-center w3-padding-64 " style="max-width:800px">
+      <h2 class="w3-wide" id="team">Team</h2>
+      <p class="w3-center">
+        Wir sind eine Gruppe von drei Schülern der HTL Wien 3 Rennweg.<br>
+        Gemeinsam erarbeiten wir uns diese Diplomarbeit um die Schule erfolgreich abzuschließen.
+      </p>
+
+      <!-- Teammember images and description -->
+      <div class="w3-row w3-padding-32">
+        <div class="w3-third">
+          <p>Felix Berger</p>
+          <img src="images/team/placeholder.jpg" class="w3-round" alt="Felix Berger Porträt" style="width:90%">
+          <p>Projektleiter</p>
+          <p>Story Writing & Programmierung</p>
+        </div>
+        <div class="w3-third">
+          <p>Tobias Preissner</p>
+          <img src="images/team/placeholder.jpg" class="w3-round" alt="Tobias Preissner Porträt" style="width:90%">
+          <p>Stv.Projektleiter</p>
+          <p>3D Modellierung & Animation</p>
+        </div>
+        <div class="w3-third">
+          <p>Rafael Fiedler</p>
+          <img src="images/team/placeholder.jpg" class="w3-round" alt="Rafael Fiedler Porträt" style="width:90%">
+          <p>Mitarbeiter</p>
+          <p>Programmierung<br>Unity Implementation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Team -->
+
+  <!-- Project Progress Bars -->
   <div class="w3-container w3-content w3-padding-64" id="progress" style="max-width:800px">
     <h2 class="w3-wide w3-center" id="progress">Fortschritt</h2>
     <h3 class="w3-wide">Planung</h3>
     <div class="w3-light-grey">
-     <div class="w3-container w3-grey w3-center" style="width:100%">100%</div>
-   </div>
-     <h3 class="w3-wide">Umsetzungsphase</h3>
-   <div class="w3-light-grey">
-    <div class="w3-container w3-grey w3-center" style="width:100%">100%</div>
-  </div>
+      <div class="w3-container w3-grey w3-center" style="width:100%">100%</div>
+    </div>
+    <h3 class="w3-wide">Umsetzungsphase</h3>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-grey w3-center" style="width:100%">100%</div>
+    </div>
     <h3 class="w3-wide">Testphase</h3>
     <div class="w3-light-grey">
-     <div class="w3-container w3-grey w3-center" style="width:100%">100%</div>
-   </div>
+      <div class="w3-container w3-grey w3-center" style="width:100%">100%</div>
+    </div>
   </div>
+  <!-- End Project Progress Bars -->
 
-  <!-- media -->
+  <!-- Media Area -->
   <div class="w3-black" id="media">
+    <!-- Image Gallery -->
     <div class="w3-container w3-content w3-padding-64" style="max-width:1300px">
       <h2 class="w3-wide w3-center">Medien</h2>
+      <!-- First Image Row -->
       <div class="w3-row-padding w3-center">
-         <div class="w3-col m3">
-           <img src="images/img1.PNG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="3D base mesh">
-         </div>
+        <div class="w3-col m3">
+          <img src="images/gallery/img1.jpg" style="width:100%" onclick="openImageModal(this)" class="w3-hover-opacity"
+            alt="3D base mesh">
+        </div>
 
-         <div class="w3-col m3">
-           <img src="images/img2.PNG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="3D base mesh">
-         </div>
+        <div class="w3-col m3">
+          <img src="images/gallery/img2.jpg" style="width:100%" onclick="openImageModal(this)" class="w3-hover-opacity"
+            alt="3D base mesh">
+        </div>
 
-         <div class="w3-col m3">
-           <img src="images/img3.PNG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="3D base mesh">
-         </div>
+        <div class="w3-col m3">
+          <img src="images/gallery/img3.jpg" style="width:100%" onclick="openImageModal(this)" class="w3-hover-opacity"
+            alt="3D base mesh">
+        </div>
 
-         <div class="w3-col m3">
-           <img src="images/img4.PNG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="3D base mesh">
-         </div>
-       </div>
-       <div class="w3-row-padding w3-center w3-section">
-         <div class="w3-col m3">
-           <img src="images/image5.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="HubWorld">
-         </div>
+        <div class="w3-col m3">
+          <img src="images/gallery/img4.jpg" style="width:100%" onclick="openImageModal(this)" class="w3-hover-opacity"
+            alt="3D base mesh">
+        </div>
+      </div>
 
-         <div class="w3-col m3">
-           <img src="images/image6.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="HubWorld">
-         </div>
+      <!-- Second Image Row -->
+      <div class="w3-row-padding w3-center w3-section">
+        <div class="w3-col m3">
+          <img src="images/gallery/image5.jpg" style="width:100%" onclick="openImageModal(this)" class="w3-hover-opacity"
+            alt="HubWorld">
+        </div>
 
-         <div class="w3-col m3">
-           <img src="images/image7.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="HubWorld">
-         </div>
+        <div class="w3-col m3">
+          <img src="images/gallery/image6.jpg" style="width:100%" onclick="openImageModal(this)" class="w3-hover-opacity"
+            alt="HubWorld">
+        </div>
 
-         <div class="w3-col m3">
-           <img src="images/image8.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="HubWorld">
-         </div>
-       </div> 
-       <div class="w3-row-padding w3-center w3-section">
-         <div class="w3-col m3">
-           <img src="images/image9.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Wachen">
-         </div>
+        <div class="w3-col m3">
+          <img src="images/gallery/image7.jpg" style="width:100%" onclick="openImageModal(this)" class="w3-hover-opacity"
+            alt="HubWorld">
+        </div>
 
-         <div class="w3-col m3">
-           <img src="images/image10.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Außenbezirk">
-         </div>
+        <div class="w3-col m3">
+          <img src="images/gallery/image8.jpg" style="width:100%" onclick="openImageModal(this)" class="w3-hover-opacity"
+            alt="HubWorld">
+        </div>
+      </div>
 
-         <div class="w3-col m3">
-           <img src="images/image11.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sperrgebiet im Außenbezirk">
-         </div>
+      <!-- Third Image Row -->
+      <div class="w3-row-padding w3-center w3-section">
+        <div class="w3-col m3">
+          <img src="images/gallery/image9.JPG" style="width:100%" onclick="openImageModal(this)" class="w3-hover-opacity" alt="Wachen">
+        </div>
 
-         <div class="w3-col m3">
-           <img src="images/image12.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sperrgebiet">
-         </div>
-       </div> 
+        <div class="w3-col m3">
+          <img src="images/gallery/image10.JPG" style="width:100%" onclick="openImageModal(this)" class="w3-hover-opacity"
+            alt="Außenbezirk">
+        </div>
+
+        <div class="w3-col m3">
+          <img src="images/gallery/image11.JPG" style="width:100%" onclick="openImageModal(this)" class="w3-hover-opacity"
+            alt="Sperrgebiet im Außenbezirk">
+        </div>
+
+        <div class="w3-col m3">
+          <img src="images/gallery/image12.JPG" style="width:100%" onclick="openImageModal(this)" class="w3-hover-opacity"
+            alt="Sperrgebiet">
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Modal for image media-->
+  <!-- Modal for image media -->
   <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-    <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+    <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
+        class="fa fa-remove"></i></span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
       <img id="img01" class="w3-image">
       <p id="caption" class="w3-opacity w3-large"></p>
     </div>
   </div>
-  
+  <!-- End Modal -->
 
 
-  <!-- documents -->
+
+  <!-- Document Area -->
   <div class="w3-container w3-content w3-padding-64 w3-center" style="max-width:800px" id="documents">
     <h2 class="w3-wide w3-center">Dokumente</h2>
-    <p class="w3-opacity w3-center"><i>Hier können Sie offizielle Dokumente wie zum Beispiel den Diplomarbeitsantrag herunterladen.</i></p>
-	<a class="w3-button w3-black w3-center" href="documents/0920_v1_1Antrag.pdf"><i class="fa fa-download"></i> Diplomarbeitsantrag</a>
-    </div>
+    <p class="w3-opacity w3-center"><i>Hier können Sie offizielle Dokumente wie zum Beispiel den Diplomarbeitsantrag
+        herunterladen.</i></p>
+    <a class="w3-button w3-black w3-center" href="documents/0920_v1_1Antrag.pdf"><i class="fa fa-download"></i>
+      Diplomarbeitsantrag</a>
   </div>
-<!-- End Page Content -->
+  <!-- End Document Area -->
 
-<!-- Footer -->
-  <footer class="w3-black" id="imprint" >
+  </div>
+  <!-- End Page Content -->
+
+  <!-- Footer -->
+  <footer class="w3-black" id="imprint">
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-  <div class="w3-row-padding">
-    <div class="w3-third">
-      <h3>Impressum</h3>
-      <p>Diplomarbeit Lights Out</p>
-      <p>HTL Rennweg<br>
-      Rennweg 89b, 1030 Wien</p>
-      <p>Alle rechtlichen Information befinden sich <a href="imprint.html" >hier</a>.</p>
-      <p>Email:<br>
-      <script>
-        user = 'LightsOutDevTeam';
-        site = 'gmail.com';
-        document.write('<a href=\"mailto:' + user + '@' + site + '\">');
-        document.write(user + '@' + site + '</a>');
-      </script>
+      <div class="w3-row-padding">
+        <div class="w3-third">
+          <h3>Impressum</h3>
+          <p>Diplomarbeit Lights Out</p>
+          <p>HTL Rennweg<br>
+            Rennweg 89b, 1030 Wien</p>
+          <p>Alle rechtlichen Information befinden sich <a href="imprint.html">hier</a>.</p>
+          <p>Email:<br>
+              <!-- generate email -->
+            <script>
+              user = 'LightsOutDevTeam';
+              site = 'gmail.com';
+              document.write('<a href=\"mailto:' + user + '@' + site + '\">');
+              document.write(user + '@' + site + '</a>');
+            </script>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
   </footer>
+  <!-- End Footer -->
 
 
-<script>
+  <script>
 
-function myFunction() {
-  var x = document.getElementById("navBar");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
+    //opens NavBar on mobile devices
+    function openNavBar() {
+      var x = document.getElementById("navBar");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
 
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-</script>
+    //opens a image modal with given image tag
+    function openImageModal(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+  </script>
 
 </body>
 
+
+ <!-- externel stylesheets -->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </html>
-									
